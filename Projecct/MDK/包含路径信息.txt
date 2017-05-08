@@ -1,0 +1,8 @@
+..\USER\inc
+..\USER\src
+..\..\Libraries\startup\CoreSupport
+..\..\Libraries\startup\DeviceSupport\MDK-ARM
+..\..\Libraries\startup\DeviceSupport
+..\..\Libraries\drives\inc
+..\..\Libraries\drives\src
+..\..\Libraries\seekfree
