@@ -32,11 +32,11 @@
                 </option>
                 <option>
                     <name>Input description</name>
-                    <state>Automatic choice of formatter, without multibyte support.</state>
+                    <state>Automatic choice of formatter, with multibyte support.</state>
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state>Automatic choice of formatter, without multibyte support.</state>
+                    <state>Automatic choice of formatter, with multibyte support.</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -121,11 +121,11 @@
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OGUseCmsisDspLib</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GRuntimeLibThreads</name>
@@ -177,7 +177,7 @@
                 </option>
                 <option>
                     <name>OGPrintfMultibyteSupport</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OGScanfVariant</name>
@@ -186,7 +186,7 @@
                 </option>
                 <option>
                     <name>OGScanfMultibyteSupport</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenLocaleTags</name>
@@ -1135,16 +1135,34 @@
     <group>
         <name>mycode</name>
         <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\beep.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\beep.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\mycode\data.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\mycode\data.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\dspdata.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\dspdata.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\mycode\gy273.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\mycode\gy273.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\img_deal.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\img_deal.h</name>
         </file>
     </group>
     <group>

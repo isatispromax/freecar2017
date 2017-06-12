@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings>
     <DebugChecksum>
-        <Checksum>613252609</Checksum>
+        <Checksum>4218255979</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -31,6 +31,9 @@
     <Disassembly>
         <MixedMode>1</MixedMode>
     </Disassembly>
+    <array_types>
+        <Fmt0>uint8[32]	4	0</Fmt0>
+    </array_types>
     <watch_formats>
         <Fmt0>{W}1:i	3	0</Fmt0>
     </watch_formats>
@@ -74,7 +77,9 @@
         <Bp7>_ 0 "EMUL_DATA" "simiic_delay" 0 0 0 0 4294967295</Bp7>
         <Bp8>_ 0 "EMUL_DATA" "Multiple_read_HMC5883" 0 0 0 0 4294967295</Bp8>
         <Bp9>_ 0 "EMUL_DATA" "SlaveID" 0 0 0 0 4294967295</Bp9>
-        <Count>10</Count>
+        <Bp10>_ 0 "EMUL_DATA" "fine_yes_no" 0 0 0 0 4294967295</Bp10>
+        <Bp11>_ 0 "EMUL_DATA" "get_position_size" 0 0 0 0 4294967295</Bp11>
+        <Count>12</Count>
     </Breakpoints2>
     <Aliases>
         <Count>0</Count>

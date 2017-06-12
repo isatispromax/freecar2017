@@ -48,6 +48,7 @@ int main(void)
     double angle[5]={0};
     int i,j;
     
+    //gpio_init(C13,GPO,0);
     get_clk();//上电后必须运行一次这个函数，获取各个频率信息，便于后面各个模块的参数设置
     my_delay(9999999);                                     //上电延时以便于摄像头初始化
     uart_init (uart0, 115200);                          //初始换串口与电脑通信
@@ -63,14 +64,14 @@ int main(void)
           
             mt9v032_finish_flag = 0;
          
-            //seekfree_sendimg_032();
-            NRF_send_image_buff();
-            //NRF_sendimg();
-            //get_position_size();
+           //seekfree_sendimg_032();
+           // NRF_send_image_buff();
+           // NRF_sendimg();
+            get_position_size();
          
           }
           //Multiple_read_HMC5883_Hard(gy273buff);
-         // Read_HMC5883(gy273buff,angle);      
+          //Read_HMC5883(gy273buff,angle);      
           //printf("angle0:    %f \n",angle[0]);
           //my_delay(9999999);
        

@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\settings\SeekFree_Kinetis.MK60_Debug.general.xcl" --backend -f "G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\settings\SeekFree_Kinetis.MK60_Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\settings\SeekFree_Kinetis.MK60_Debug.general.xcl" --backend -f "G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\settings\SeekFree_Kinetis.MK60_Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\settings\SeekFree_Kinetis.MK60_Debug.general.xcl" "--debug_file=%~1" --backend -f "G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\settings\SeekFree_Kinetis.MK60_Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\settings\SeekFree_Kinetis.MK60_Debug.general.xcl" "--debug_file=%~1" --backend -f "G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\settings\SeekFree_Kinetis.MK60_Debug.driver.xcl" 
 
 @echo off 
 :end

@@ -1274,16 +1274,34 @@
     <group>
         <name>mycode</name>
         <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\beep.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\beep.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\mycode\data.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\mycode\data.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\dspdata.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\dspdata.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\mycode\gy273.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\mycode\gy273.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\img_deal.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Libraries\mycode\img_deal.h</name>
         </file>
     </group>
     <group>

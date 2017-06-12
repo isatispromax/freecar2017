@@ -1,42 +1,46 @@
-"G:\12届智能车\软件部分\飞机主板\zhufei\Libraries\mycode\data.c"
+"G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Libraries\mycode\data.c"
 -std=c11
 -ferror-limit=100
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\..\..\USER\inc
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\..\..\USER\inc
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\..\..\USER\src
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\..\..\USER\src
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\..\..\..\Libraries\startup\CoreSupport
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\..\..\..\Libraries\startup\CoreSupport
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\..\..\..\Libraries\startup\DeviceSupport\IAR-ARM
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\..\..\..\Libraries\startup\DeviceSupport\IAR-ARM
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\..\..\..\Libraries\startup\DeviceSupport
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\..\..\..\Libraries\startup\DeviceSupport
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\..\..\..\Libraries\drives\inc
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\..\..\..\Libraries\drives\inc
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\..\..\..\Libraries\seekfree
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\..\..\..\Libraries\seekfree
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\IAR\program\..\..\..\Libraries\mycode
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\IAR\program\..\..\..\Libraries\mycode
+-I
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc\c
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\USER\inc
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\USER\inc
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Projecct\USER\src
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Projecct\USER\src
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Libraries\startup\CoreSupport
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Libraries\startup\CoreSupport
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Libraries\startup\DeviceSupport\IAR-ARM
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Libraries\startup\DeviceSupport\IAR-ARM
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Libraries\startup\DeviceSupport
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Libraries\startup\DeviceSupport
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Libraries\drives\inc
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Libraries\drives\inc
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Libraries\seekfree
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Libraries\seekfree
 -I
-G:\12届智能车\软件部分\飞机主板\zhufei\Libraries\mycode
+G:\12届智能车\软件部分\飞机主板\zhufei\freecar2017\Libraries\mycode
+-I
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=127
 -D__CHAR_MIN__=(-__CHAR_MAX__-1)
@@ -298,6 +302,7 @@ G:\12届智能车\软件部分\飞机主板\zhufei\Libraries\mycode
 -D__EDG_SYSV=0
 -D__EDG_ANSIC=1
 -D__EDG_CPP11_IL_EXTENSIONS_SUPPORTED=1
+-DARM_MATH_CM4=1
 -D_DLIB_CONFIG_FILE_HEADER_NAME=u8"C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Full.h"
 -D_DLIB_CONFIG_FILE_STRING=u8"C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Full.h"
 -D__VERSION__="IAR ANSI C/C++ Compiler V8.10.1.12857/W32 for ARM"

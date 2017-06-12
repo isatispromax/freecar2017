@@ -17,7 +17,7 @@
 #define DATAREGISTER4       0x07
 #define DATAREGISTER5       0x08
 
-
+//#define PI  3.14159265
 
 #define HMC5883I2C i2c0
 

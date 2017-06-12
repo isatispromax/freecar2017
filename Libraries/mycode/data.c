@@ -1,11 +1,9 @@
 #include "headfile.h"
 #include "data.h"
+#include "math.h"
 
-#define THRESHOLD 120
+#define THRESHOLD 130
 
-typedef struct Node{
-    uint16 x,y,size;
-}Node;
 
 int dir[][2]=
 {
@@ -14,10 +12,13 @@ int dir[][2]=
   {1,0},{-1,1},
   {0,1},{1,1}
 };
-Node head[200];
+Node head[10];
 uint8 tempimage[ROW][COL]; //用于处理数据 的临时数组
 uint8 binary_image[ROW][COL]; //二值化后的数组
 uint16 light_num; //亮点的数目
+
+uint16 xmax,ymax,xmin,ymin;
+
 /*
 
 *COL     188//图像宽度  
@@ -87,6 +88,12 @@ uint8 gray_binary(uint8 *image,uint8 *binimage)
 */
 void find_size(int i,int j){//返回连通块大小
     light_num++;
+    if(i>xmax)xmax = i;
+    if(i<xmin)xmin = i;
+    
+    if(j>ymax)ymax = j;
+    if(j<ymin)ymin = j;
+    
     tempimage[i][j]=0;
     if(i+1<ROW && tempimage[i+1][j]==1)//注意有特殊情况不能统计到
         find_size(i+1,j);
@@ -128,14 +135,20 @@ void find_position(){
             if(tempimage[i][j]==1)
             {
                 light_num=0;
+                
+                xmax = i;
+                ymax = j;
+                xmin = i;
+                ymin = j;
+                
                 find_size(i,j);
-                
-                head[finded_time].x=i;
-                head[finded_time].y=j;
-                head[finded_time].size = light_num;
-                
-                finded_time++;
-                
+                if(light_num > 3)
+                {
+                  head[finded_time].x=(xmax + xmin)/2;
+                  head[finded_time].y=(ymax + ymin)/2;
+                  head[finded_time].size = light_num;                
+                  finded_time++;
+                }
                 /*
                 newpos.x=i,newpos.y=j;
                 newpos.size=light_num;
@@ -157,7 +170,7 @@ void find_position(){
 */
 uint8 fine_yes_no()
 {
-  if(head[0].size == 0)
+  if((head[0].size ==0) || (finded_time != 2))
   {
     return 0;
   }
@@ -187,19 +200,97 @@ void find_fetch()
   }
 }
 /*
+void nrf_send_data(double dat)
+{
+  uint8 send_buff[32]={0};
+  uint8 i =0;
+  dat = dat/100;
+  send_buff[0] = 0x00;
+  for(i = 1;i<10;i++)
+  {
+    send_buff[i] = (int)dat%10;
+    dat = dat * 10;
+  }
+  NRF_Send_Packet(send_buff);
+  
+}
+*/
+void nrf_send_data(double* dat)
+{
+  uint8 *p;
+  uint8 i;
+  uint8 send_buff[32]={0};
+  
+  p = (uint8 *)dat;
+  
+  send_buff[0] = 0x09;
+  
+  for(i = 1;i<9;i++)
+  {
+    send_buff[i] = *p;
+    p++;
+  }
+  
+  NRF_Send_Packet(send_buff);
+}
+
+/*
 *处理采集的图像，找到亮点块，并且找到它的大小
 *用到的全局变量：image:采集到的灰度图像，binimage:二值化后的图像，tempimage:用于处理数据的临时数组;
 */
+
 void get_position_size()
 {
+  double image_angle;
   //二值化
   gray_binary((uint8*)image,(uint8*)binary_image);
   //找到亮点和位置
   find_position();
   if(fine_yes_no())
   {
-    find_fetch();
+   // find_fetch();
+   // if(finded_time == 2)
+    //{
+      image_angle = get_image_angel(head[0],head[1]);
+    //}
+    //printf("%f\n",image_angle);
+      
+     nrf_send_data(&image_angle);//通过nrf发送数据
   }
+}
+
+/*
+*函数名：void get_image_angel(Node pointa,Node pointb)
+*参数：pointa,图像中的a亮点，pointb,图像中的b亮点,angle 计算出的角度
+*/
+double get_image_angel(Node pointa,Node pointb)
+{
+  //向量始终由车指向灯，也就是:小->大。向量（x,y）
+  double angle=0;
+  int x,y;
+
+    if(pointa.size>pointb.size)
+    {
+      x = (int)(pointa.x) - (int)(pointb.x);
+      y = (int)(pointa.y) - (int)(pointb.y);
+    }
+    else
+    {
+      x = (int)(pointb.x) - (int)(pointa.x);
+      y = (int)(pointb.y) - (int)(pointa.y);
+    }
+    
+    angle = atan2((double)x,(double)y) * (180 / PI)+180;  
+    if(angle > 360)
+    {
+      x = 0;
+    }
+    if(angle>100)
+    {
+      x = 1;
+    }
+    return angle;
+ 
 }
 
 /*
@@ -219,5 +310,6 @@ uint8 find_light_car(uint8 *image,uint8 width,uint8 longth)
      
      }
    }
+   return 0;
     
 }

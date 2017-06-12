@@ -2,7 +2,7 @@
 #include "headfile.h"
 #include "math.h"
 
-#define PI  3.14159265
+
 
 /**
 *º¯ÊýÃû£ºGY273Init
@@ -42,10 +42,13 @@ uint8 Read_HMC5883(uint8 *buff,double *angle)
  // }
  // uint8 i;
   int x,y,z;
+  
+ // i2c_write_reg(i2c0,SLAVEADRESS,MODE,CONTINUOUS);
+  
   buff[0] = i2c_read_reg(i2c0,SLAVEADRESS,DATAREGISTER0);
   buff[1] = i2c_read_reg(i2c0,SLAVEADRESS,DATAREGISTER1);
-  //buff[2] = i2c_read_reg(i2c0,SLAVEADRESS,DATAREGISTER2);
-  //buff[3] = i2c_read_reg(i2c0,SLAVEADRESS,DATAREGISTER3);
+  buff[2] = i2c_read_reg(i2c0,SLAVEADRESS,DATAREGISTER2);
+  buff[3] = i2c_read_reg(i2c0,SLAVEADRESS,DATAREGISTER3);
   buff[4] = i2c_read_reg(i2c0,SLAVEADRESS,DATAREGISTER4);
   buff[5] = i2c_read_reg(i2c0,SLAVEADRESS,DATAREGISTER5);
   

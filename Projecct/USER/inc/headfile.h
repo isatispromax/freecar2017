@@ -23,6 +23,7 @@
 #ifndef _headfile_h
 #define _headfile_h
 
+#include "arm_math.h"
 
 #include "MK60D10.h"
 #include "MK60DN10_port_cfg.h"
@@ -65,5 +66,6 @@
 //---------自己的代码-----------------
 #include "gy273.h"
 #include "data.h"
-
+#include "beep.h"
+#include "img_deal.h"
 #endif
