@@ -26,7 +26,7 @@
 UART_Type * uart[6] = UART_BASES;
 
 #define PRINTF_PORT     uart0
-#define PRINTF_UART  //定义NRF选择用PRINT_NRF作为NRF的发送口，定义PRINTF_UART选择用串口作为printf的发送口
+#define PRINT_NRF  //定义NRF选择用PRINT_NRF作为NRF的发送口，定义PRINTF_UART选择用串口作为printf的发送口
 
 //-------------------------------------------------------------------------------------------------------------------
 //  @brief      uart 初始化

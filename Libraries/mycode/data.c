@@ -95,7 +95,7 @@ void find_size(int i,int j){//返回连通块大小
     if(j<ymin)ymin = j;
     
     tempimage[i][j]=0;
-    if(i+1<ROW && tempimage[i+1][j]==1)//注意有特殊情况不能统计到
+    if(i+1<ROW && tempimage[i+1][j]==1)//注意有特殊情况不能统计到  //已经修正
         find_size(i+1,j);
     if(i-1>=0 && tempimage[i-1][j]==1)
         find_size(i-1,j);
@@ -142,7 +142,7 @@ void find_position(){
                 ymin = j;
                 
                 find_size(i,j);
-                if(light_num > 3)
+                if(light_num > 1)
                 {
                   head[finded_time].x=(xmax + xmin)/2;
                   head[finded_time].y=(ymax + ymin)/2;
@@ -215,11 +215,13 @@ void nrf_send_data(double dat)
   
 }
 */
+
 void nrf_send_data(double* dat)
 {
   uint8 *p;
   uint8 i;
   uint8 send_buff[32]={0};
+  double hmc_angle;
   
   p = (uint8 *)dat;
   
@@ -231,7 +233,23 @@ void nrf_send_data(double* dat)
     p++;
   }
   
+  
+  hmc_get_data(&hmc_angle);
+  p = (uint8 *)&hmc_angle;
+  for(i = 9;i<17;i++)
+  {
+    send_buff[i] = *p;
+    p++;
+  }
+  
   NRF_Send_Packet(send_buff);
+}
+
+void hmc_get_data(double *hmc_angle)
+{
+  uint8 gy273buff[8]={0};
+  Read_HMC5883(gy273buff,hmc_angle); 
+  
 }
 
 /*
@@ -256,7 +274,7 @@ void get_position_size()
     //}
     printf("%f\n",image_angle);
       
-     nrf_send_data(&image_angle);//通过nrf发送数据
+     //nrf_send_data(&image_angle);//通过nrf发送数据
   }
 }
 

@@ -13,5 +13,8 @@ void find_position();
 void find_size(int i,int j);
 uint8 gray_binary(uint8 *image,uint8 *binimage);
 double get_image_angel(Node pointa,Node pointb);
+void hmc_get_data(double *hmc_angle);
+
+
 
 #endif

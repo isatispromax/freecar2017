@@ -63,7 +63,7 @@ int main(void)
           
             mt9v032_finish_flag = 0;
          
-           //seekfree_sendimg_032();
+           seekfree_sendimg_032();
            // NRF_send_image_buff();
            // NRF_sendimg();
             get_position_size();
