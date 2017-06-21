@@ -39,7 +39,6 @@ MT9V032接线定义：
 #include "headfile.h"
 
 
-
 int main(void)
 {
   
@@ -54,7 +53,7 @@ int main(void)
     uart_init (uart0, 115200);                          //初始换串口与电脑通信
     camera_init();
     NRF_Dev_Init();
-    Gy273Init();
+    //Gy273Init();
     uart_putchar(uart0,'a');
     
     for(;;)
@@ -72,8 +71,8 @@ int main(void)
           }
           //Multiple_read_HMC5883_Hard(gy273buff);
           //Read_HMC5883(gy273buff,angle);      
-          //printf("angle0:    %f \n",angle[0]);
-          //my_delay(9999999);
+         // printf("angle0:    %f \n",angle[0]);
+         // my_delay(9999999);
        
           
 	}
