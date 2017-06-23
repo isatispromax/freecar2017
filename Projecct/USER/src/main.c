@@ -53,7 +53,7 @@ int main(void)
     uart_init (uart0, 115200);                          //初始换串口与电脑通信
     camera_init();
     NRF_Dev_Init();
-    //Gy273Init();
+   // Gy273Init();
     uart_putchar(uart0,'a');
     
     for(;;)
@@ -63,7 +63,7 @@ int main(void)
           
             mt9v032_finish_flag = 0;
          
-           seekfree_sendimg_032();
+           //seekfree_sendimg_032();
            // NRF_send_image_buff();
            // NRF_sendimg();
             get_position_size();
@@ -72,7 +72,7 @@ int main(void)
           //Multiple_read_HMC5883_Hard(gy273buff);
           //Read_HMC5883(gy273buff,angle);      
          // printf("angle0:    %f \n",angle[0]);
-         // my_delay(9999999);
+          //my_delay(9999999);
        
           
 	}

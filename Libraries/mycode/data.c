@@ -221,11 +221,11 @@ void nrf_send_data(double* dat)
   uint8 *p;
   uint8 i;
   uint8 send_buff[32]={0};
-  double hmc_angle;
+  double hmc_angle=-91.26546;
   
   p = (uint8 *)dat;
   
-  send_buff[0] = 0x09;
+  send_buff[0] = 0x16;
   
   for(i = 1;i<9;i++)
   {
@@ -234,14 +234,14 @@ void nrf_send_data(double* dat)
   }
   
   
-  hmc_get_data(&hmc_angle);
+ // hmc_get_data(&hmc_angle);
   p = (uint8 *)&hmc_angle;
   for(i = 9;i<17;i++)
   {
     send_buff[i] = *p;
     p++;
   }
-  
+  printf("the img_ang:  %f  ,the hmc_ang:  %f  \n",*dat,hmc_angle);
   NRF_Send_Packet(send_buff);
 }
 
@@ -264,17 +264,17 @@ void get_position_size()
   gray_binary((uint8*)image,(uint8*)binary_image);
   //找到亮点和位置
   find_position();
-  //if(fine_yes_no())
-   if(1)
+  if(fine_yes_no())
+  // if(1)
   {
    // find_fetch();
    // if(finded_time == 2)
     //{
       image_angle = get_image_angel(head[0],head[1]);
     //}
-    printf("%f\n",image_angle);
+    //printf("%f\n",image_angle);
       
-     //nrf_send_data(&image_angle);//通过nrf发送数据
+     nrf_send_data(&image_angle);//通过nrf发送数据
   }
 }
 

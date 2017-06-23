@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings>
     <DebugChecksum>
-        <Checksum>790187758</Checksum>
+        <Checksum>1982363927</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -79,7 +79,8 @@
         <Bp9>_ 0 "EMUL_DATA" "SlaveID" 0 0 0 0 4294967295</Bp9>
         <Bp10>_ 0 "EMUL_DATA" "fine_yes_no" 0 0 0 0 4294967295</Bp10>
         <Bp11>_ 0 "EMUL_DATA" "get_position_size" 0 0 0 0 4294967295</Bp11>
-        <Count>12</Count>
+        <Bp12>_ 0 "EMUL_DATA_LOG" "get_image_angel" 0 0</Bp12>
+        <Count>13</Count>
     </Breakpoints2>
     <Aliases>
         <Count>0</Count>

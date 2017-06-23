@@ -1168,18 +1168,6 @@
     <group>
         <name>seekfree</name>
         <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_18TFT.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_18TFT.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_7725.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_7725.h</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_FUN.c</name>
         </file>
         <file>
@@ -1190,18 +1178,6 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_IIC.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_L3G4200D.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_L3G4200D.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_MMA8451.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_MMA8451.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_MPU6050.c</name>
@@ -1220,18 +1196,6 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_NRF24L01.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_OLED.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_OLED.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_TSL1401.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\Libraries\seekfree\SEEKFREE_TSL1401.h</name>
         </file>
     </group>
     <group>

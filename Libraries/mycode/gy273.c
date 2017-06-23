@@ -61,7 +61,7 @@ uint8 Read_HMC5883(uint8 *buff,double *angle)
   
   //printf("%d %d %d ",x,y,z);
   
-  angle[0] = atan2((double)y,(double)x) * (180 / PI)+180; //计算XY平面角度
+  *angle= atan2((double)y,(double)x) * (180 / PI)+180; //计算XY平面角度
   //angle[1] = atan2((double)z,(double)x) * (180 / 3.14159265) + 180; //计算XZ平面角度
   //angle[2] = atan2((double)y,(double)z) * (180 / 3.14159265) + 180; //计算ZY平面角度
   
