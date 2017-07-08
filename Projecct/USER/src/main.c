@@ -39,7 +39,7 @@ MT9V032接线定义：
 #include "headfile.h"
 
 
-int main(void)
+fint main(void)
 {
   
   
